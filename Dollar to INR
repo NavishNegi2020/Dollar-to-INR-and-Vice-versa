@@ -1,0 +1,23 @@
+dollar_to_inr = 83.99
+inr_to_dollar =1/dollar_to_inr
+
+def convert_dollar_to_inr(dollars):
+  return dollars*dollar_to_inr
+
+def convert_inr_to_dollar(inr):
+  return inr*inr_to_dollar
+
+choice = input("type 'D' to convert Dollar to Ruppee or 'R' to convert Ruppee to Dollar: ").upper()
+
+if choice == 'D':
+  dollars = float(input("Enter amount in Dollars:"))
+  result = convert_dollar_to_inr(dollars)
+  print(f"{dollars} USD is equal to {result:.2f} INR")
+
+elif choice == 'R':
+  rupees = float(input("Enter amount in Ruppees:"))
+  result = convert_inr_to_dollar(rupees)
+  print(f"{rupees} INR is equal to {result:.2f} USD")
+
+else:
+  print("invalid choice! Please select either 'D' or 'R'.")
